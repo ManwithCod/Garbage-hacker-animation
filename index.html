@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hecker</title>
+        <style>
+        </style><script>
+            window.top.close();
+</script> 
+    </head>
+    <body id="body" style="background-color:black; color:rgb(0, 255, 0); font-family: courier, monospace; font-size:14px; white-space:unset;" href="javascript:window.top.close();">
+        <span Id="special">Loading program:</span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <span></span><br>
+        <script>
+            var ab = 46;
+            var aa = 0;
+            var ii = 0;
+            var i = 0; //44
+            var span = document.getElementsByTagName('span');
+            var fancywords = 'Turing Test\n20 GOTO 10\nNSA-HEARTBEAT';
+            var fancy = fancywords.split(/\r?\n/);
+            var maxfancy = Object.keys(fancy).length-1;
+            setTimeout(() => {
+                span[0].innerHTML += fancy[Math.floor(Math.random() * (maxfancy - 0 + 1)) + 0];
+                showrandom();
+            }, 2000);
+            function showrandom() {
+                ii += 10;
+                i += 1;
+                setTimeout(() => {
+                    span[i].innerHTML += Math.floor(Math.random() * (1824335 - 0 + 1)) + 0;
+                    if(i < 46) {
+                        showrandom();
+                    } else {
+                        ii = 0;
+                        i = 0;
+                        showrandom1();
+                    }
+                }, 20 + ii);
+            };
+            
+            function showrandom1() {
+                ii += 20;
+                i += 1;
+                setTimeout(() => {
+                    span[i].innerHTML += '         '+Math.floor(Math.random() * (1824335 - 0 + 1)) + 0 + '                   ' + Math.floor(Math.random() * (1824335 - 0 + 1)) + 0;
+                    if(i < 46) {
+                        showrandom1();
+                    } else {
+                        setTimeout(() => {
+                            the_end();
+                        }, 1000);
+                    }
+                }, 20 + ii);
+            };
+            function the_end() {
+                setTimeout(() => {
+                    if(ab > -1) {
+                        the_end();
+                    } else {
+                        setTimeout(() => {
+                            document.getElementById('special').innerHTML = 'Program finished Loading. you may leave now.';
+                            document.getElementById('body').onclick = function(){
+                                close_window();
+                            };
+                        }, 1200);
+                    }
+                    span[ab].innerHTML = '';
+                    ab -= 1;
+                    aa += 10;
+                }, 20 + aa);
+            }
+        </script>
+    </body>
+</html>
